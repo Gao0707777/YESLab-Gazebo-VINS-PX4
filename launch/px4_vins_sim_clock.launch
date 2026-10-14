@@ -1,0 +1,11 @@
+<launch>
+  <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+    <arg name="vehicle" value="iris"/>
+    <arg name="sdf" value="/home/noetic/PX4-v1.14.3/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models/iris_stereo_camera/iris_stereo_camera.sdf"/>
+  </include>
+
+  <param name="/use_sim_time" type="bool" value="true"/>
+  <param name="/mavros/time/timesync_mode" type="str" value="PASSTHROUGH"/>
+  <param name="/mavros/conn/timesync_rate" type="double" value="0.0"/>
+  <param name="/mavros/conn/system_time_rate" type="double" value="0.0"/>
+</launch>
